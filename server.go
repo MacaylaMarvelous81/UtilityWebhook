@@ -5,14 +5,24 @@ import (
 import (
 	"github.com/sandertv/mcwss/protocol/event"
 )
+import (
+	"github.com/sandertv/mcwss/mctype"
+)
 func main() {
 	server := mcwss.NewServer(nil)
 	server.OnConnection(func(player *mcwss.Player) {
+		var world = player.World()
 		player.SendMessage("Welcome! You have been connected to the external service. Type .help in chat for commands!")
 		player.OnPlayerMessage(func(event *event.PlayerMessage) {
 			if event.MessageType == "chat" {
 				if event.Message == ".help" {
-					player.SendMessage("Command List:\n.help - Shows this help menu")
+					player.SendMessage("Command List:\n.help - Shows this help menu\n.love - Spawns heart particles on you")
+				}
+				if event.Message == ".love" {
+					player.Position(func(position mctype.Position) {
+						world.SpawnParticle("minecraft:heart_particle", position)
+						player.SendMessage("Heart particles created!")
+					})
 				}
 			}
 		})
