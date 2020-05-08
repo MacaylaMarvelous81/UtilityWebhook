@@ -1,7 +1,7 @@
 ---
 name: Bug Report
 about: Create a bug report to help us improve!
-title: "[BUG] Bug name here"
+title: "[BUG] What do you want to call this bug?"
 labels: bug
 assignees: MacaylaMarvelous81
 
