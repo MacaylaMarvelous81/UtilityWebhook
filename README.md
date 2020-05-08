@@ -6,6 +6,4 @@
 ## Run Server
 `go run server.go`
 ## Connect
-`/wsserver localhost:8000/ws`
-or
-`/connect localhost:8000/ws`
+`/wsserver localhost:8000/ws` or `/connect localhost:8000/ws`
