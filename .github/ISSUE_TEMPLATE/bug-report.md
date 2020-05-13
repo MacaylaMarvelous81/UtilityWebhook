@@ -25,13 +25,13 @@ Are there any screenshots you can take of the bug?
 **Desktop (please complete the following information):**
  - OS: [Windows 10/Windows 8]
  - Version [e.g. v1.14.60]
- - In beta [yes/no]
+ - In beta: [yes/no]
 
 **Smartphone (please complete the following information):**
  - Device: [e.g. iPhone6]
  - OS: [e.g. iOS8.1]
  - Version [e.g. v1.16.60]
- - In beta [yes/no]
+ - In beta: [yes/no]
 
 **Additional context**
 Add any other context about the problem here.
