@@ -1,11 +1,7 @@
 package main
 import (
 	"github.com/sandertv/mcwss"
-)
-import (
-	"github.com/sandertv/mcwss/protocol/event"
-)
-import (
+	"github.com/sandertc/mcwss/protocol/event"
 	"github.com/sandertv/mcwss/mctype"
 )
 func main() {
