@@ -14,17 +14,20 @@ func main() {
 				if event.Sender == player.Name() {
 					if event.Message == ".help" {
 						player.SendMessage("Command List:\n.help - Shows this help menu\n.love - Spawns heart particles on you\n.angry - Spawns angry particles on you")
+						player.CloseChat()
 					}
 					if event.Message == ".love" {
 						player.Position(func(position mctype.Position) {
 							world.SpawnParticle("minecraft:heart_particle", position)
 							player.SendMessage("Heart particles created!")
+							player.CloseChat()
 						})
 					}
 					if event.Message == ".angry" {
 						player.Position(func(position mctype.Position) {
 							world.SpawnParticle("minecraft:villager_angry", position)
 							player.SendMessage("Angry particles created!")
+							player.CloseChat()
 						})
 					}
 				}
